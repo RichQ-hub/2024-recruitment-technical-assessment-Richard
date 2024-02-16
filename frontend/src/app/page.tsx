@@ -1,8 +1,8 @@
 import CoursesList from '@/components/CoursesList';
 import SearchBar from '@/components/SearchBar';
 import SortButton from '@/components/SortButton';
-import { noto } from '@/fonts';
 import courseData from '../courses.json';
+import HeroTitle from '@/components/HeroTitle/HeroTitle';
 
 const SORT_OPTIONS = [
   'Alphabetical',
@@ -20,9 +20,7 @@ export default function HomePage() {
         <small className='block font-medium text-sm mb-3'>
           DevSoc presents
         </small>
-        <h1 className={`${noto.className} mb-3 font-black text-unielectives-brand text-6xl font-h`}>
-          unilectives
-        </h1>
+        <HeroTitle title='unilectives' />
         <p className='font-extrabold'>
           Your one-stop shop for UNSW course and elective reviews.
         </p>
