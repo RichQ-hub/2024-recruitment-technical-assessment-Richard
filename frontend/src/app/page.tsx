@@ -1,13 +1,20 @@
+import CoursesList from '@/components/CoursesList';
 import SearchBar from '@/components/SearchBar';
 import SortButton from '@/components/SortButton';
 import { noto } from '@/fonts';
-import Image from "next/image";
+import courseData from '../courses.json';
 
-const SORT_OPTIONS = ['Alphabetical', 'Threads (High - Low)', 'Threads (Low - High)'];
+const SORT_OPTIONS = [
+  'Alphabetical',
+  'Highest Rated',
+  'Lowest Rated',
+  'Reviews (High - Low)',
+  'Reviews (Low - High)'
+];
 
 export default function HomePage() {
   return (
-    <main className='mx-auto py-6 max-w-5xl'>
+    <main className='mx-auto py-6 max-w-6xl'>
       {/* Header Section */}
       <header className='mb-10'>
         <small className='block font-medium text-sm mb-3'>
@@ -25,11 +32,12 @@ export default function HomePage() {
       <SearchBar />
 
       {/* Filters */}
-      <section className='flex items-center'>
+      <section className='flex items-center mb-8'>
         <SortButton options={SORT_OPTIONS} />
       </section>
 
       {/* Course List */}
+      <CoursesList courses={courseData} />
     </main>
   );
 }

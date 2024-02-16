@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased text-black`}>
         <Sidenav />
-        <div className='ml-20 bg-white min-h-screen'>
+        <div className='ml-20 px-4 bg-white min-h-screen'>
           {children}
         </div>
       </body>

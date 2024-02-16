@@ -30,7 +30,7 @@ const SortButton = ({
 
       {/* Dropdown Menu */}
       {isOpen &&
-        <ul className='absolute top-[calc(100%)] right-0 left-0 shadow-lg'>
+        <ul className='absolute top-[calc(100%)] right-0 left-0 shadow-lg bg-white z-10'>
           {options.map((opt, idx) => {
             return (
               <li
