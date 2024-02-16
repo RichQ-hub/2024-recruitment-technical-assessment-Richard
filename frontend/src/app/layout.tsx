@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Sidenav from '@/components/Navbar';
 import { inter } from '@/fonts';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -10,8 +11,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -20,6 +23,7 @@ export default function RootLayout({
         <div className='ml-20 px-4 bg-white min-h-screen'>
           {children}
         </div>
+        {modal}
       </body>
     </html>
   );
